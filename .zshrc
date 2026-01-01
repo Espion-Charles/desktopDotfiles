@@ -117,4 +117,4 @@ alias on="onedrive --sync"
 alias down="cd Downloads"
 alias devu="cd /home/charles/OneDrive/Bloc_1/TP_progra/"
 alias ff="fastfetch"
-
+alias os="hyprpm enable csgo-vulkan-fix -v"
