@@ -8,15 +8,25 @@ cd ~/Downloads || exit
 git clone https://aur.archlinux.org/paru.git
 cd paru/
 makepkg -si
+cd ~
+paru -Syu zen-browser-bin osu-lazer-bin
+
+cd ~/Downloads
+git clone https://codeberg.org/fairyglade/ly.git
+cd ly/
+zig build
+sudo zig build installexe -Dinit_system=systemd
+systemctl enable ly@tty2.service
+
 
 cd ~
 
-paru -Syu zen-browser-bin osu-lazer-bin 
+
 
 mkdir -p ~/.config
 
 ln -s ~/desktopDotfiles/hypr ~/.config
-ln -s ~/desktopDotfiles~/quickshell ~/.config
+ln -s ~/desktopDotfiles~/waybar ~/.config
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
