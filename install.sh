@@ -1,6 +1,12 @@
 #!/bin/bash
+if ! grep -q "^\[multilib\]" /etc/pacman.conf; then
+    echo "Adding multilib"
+    sudo sed -i '/^#\[multilib\]/,+1 s/^#//' /etc/pacman.conf
+    echo "Multilib added"
+    sudo pacman -Syu
+fi
 
-sudo pacman -Syu hyprland kitty noto-fonts dolphin discord steam grim slurp pipewire wireplumber waybar xdg-desktop-portal-hyprland wofi okular qt6-wayland nvim hyprpaper hyprlock code zsh
+sudo pacman -Syu hyprland kitty noto-fonts dolphin discord steam grim slurp pipewire wireplumber waybar xdg-desktop-portal-hyprland wofi  qt6-wayland nvim hyprpaper hyprlock code zsh
 
 mkdir -p ~/Downloads
 
@@ -9,7 +15,7 @@ git clone https://aur.archlinux.org/paru.git
 cd paru/
 makepkg -si
 cd ~
-paru -Syu zen-browser-bin osu-lazer-bin
+paru -Syu zen-browser-bin osu-lazer-bin zig
 
 cd ~/Downloads
 git clone https://codeberg.org/fairyglade/ly.git
