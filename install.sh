@@ -6,7 +6,7 @@ if ! grep -q "^\[multilib\]" /etc/pacman.conf; then
     sudo pacman -Syu
 fi
 
-sudo pacman -Syu hyprland kitty noto-fonts dolphin discord steam grim slurp pipewire wireplumber waybar xdg-desktop-portal-hyprland wofi  qt6-wayland nvim hyprpaper hyprlock code zsh
+sudo pacman -Syu hyprland kitty noto-fonts dolphin discord steam grim slurp pipewire wireplumber waybar xdg-desktop-portal-hyprland wofi  qt6-wayland nvim hyprpaper hyprlock code base-devel zsh
 
 mkdir -p ~/Downloads
 
