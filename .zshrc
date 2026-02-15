@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 alias pas="paru -S"
 alias par="paru -Rns"
 alias pary="paru -Syu"
+alias paq="paru -Q"
 alias sd="sudo"
 alias nv="nvim"
 alias hypr="nvim ~/.config/hypr/hyprland.conf"
@@ -118,3 +119,5 @@ alias down="cd Downloads"
 alias devu="cd /home/charles/OneDrive/Bloc_1/TP_progra/"
 alias ff="fastfetch"
 alias os="hyprpm enable csgo-vulkan-fix -v"
+alias nos="hyprpm disable csgo-vulkan-fix"
+
